@@ -1,0 +1,154 @@
+:root {
+  /* Colors */
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-background: #0f172a;
+  --color-surface: #1e293b;
+  --color-text: #f8fafc;
+  --color-text-secondary: #cbd5e1;
+  --color-success: #22c55e;
+
+  /* Typography */
+  --font-primary: "Poppins", sans-serif;
+
+  /* Border*/
+  --color-border: #334155;
+
+  /* Border Radius */
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+
+  /* Transitions */
+  --transition: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* LAYOUT */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+/* COMPONENTS */
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*gap: 5rem;*/
+  padding: 1rem;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  margin: 0.8rem;
+  padding: 0.2rem 0.8rem;
+  color: var(--color-text);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  gap: 0.8rem;
+  color: var(--color-text); /*Cor de identificação*/
+}
+
+/* SECTIONS */
+.hero-section .container {
+  display: flex;
+  align-items: center;
+}
+
+.hero-label {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+}
+
+.hero-title {
+  color: var(--color-primary);
+  font-size: 9rem;
+}
+
+.hero-title span {
+  color: var(--color-text);
+}
+
+.hero-subtitle {
+  font-size: 2rem;
+  color: var(--color-text);
+}
+
+.hero-description {
+  margin: 2rem 0;
+  color: var(--color-text-secondary);
+  font-size: 1.5rem;
+  max-width: 40rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-primary {
+  font-size: 1.5rem;
+  align-items: center;
+  min-width: 200px;
+  height: 4rem;
+  background-color: var(--color-primary);
+  padding: 0.5rem;
+}
+
+.btn .material-symbols-outlined {
+  font-size: 1.2rem;
+}
+
+.btn-secondary {
+  font-size: 1.5rem;
+  border: var(--color-border) solid 0.1rem;
+  min-width: 200px;
+  padding: 0.5rem;
+}
+
+.hero-image {
+  width: 40%;
+  margin: 0 2rem 0 5rem;
+}
