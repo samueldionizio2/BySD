@@ -101,7 +101,7 @@ cards.forEach((card) => {
   card.addEventListener("mouseenter", () => {
     const serviceId = card.dataset.service;
 
-    updatePreview(serviceId, true);
+    renderPreview(serviceId, true);
   });
 
   card.addEventListener("mouseleave", () => {
@@ -109,7 +109,7 @@ cards.forEach((card) => {
 
     if (isSelected) return;
 
-    updatePreview(selectedService);
+    renderPreview(selectedService);
   });
 
   card.addEventListener("click", () => {
@@ -134,8 +134,9 @@ cards.forEach((card) => {
 
 function changeIcon(newIcon) {
 
-  // Se o ícone já é o mesmo, não anima
-  if (previewIcon.src.includes(newIcon)) {
+  const currentIcon = previewIcon.getAttribute("src");
+
+  if (currentIcon === newIcon) {
     return;
   }
 
@@ -145,8 +146,8 @@ function changeIcon(newIcon) {
     previewIcon.src = newIcon;
 
     previewIcon.classList.remove("change-out");
-
     previewIcon.classList.add("change-in");
+
   }, 250);
 
   setTimeout(() => {
